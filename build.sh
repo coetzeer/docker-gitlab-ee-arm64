@@ -14,6 +14,7 @@ cat version_list | while read version; do
 done
 
 LATEST=$(git tag | sort -rV | head -n 1)
+DOCKER_NAME=gitlab
 
 if [ -f ./latest ]; then
     old= cat ./latest
